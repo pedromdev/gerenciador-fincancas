@@ -1,0 +1,5 @@
+/data/
+/vendor/
+/nbproject/
+*local.php
+composer.lock 

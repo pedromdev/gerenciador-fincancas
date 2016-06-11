@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.2/phpunit.xsd"
+        bootstrap="./test/Bootstrap.php"
+        colors="true"
+        stopOnFailure="false">
+    <testsuites>
+        <testsuite name="config">
+            <file>./test/AuthTest/Manager/AuthManagerConfigTest.php</file>
+            <file>./test/AuthTest/Manager/AuthManagerTest.php</file>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-text" target="php://stdout"/>
+        <log type="testdox-html" target="test/tmp/testdox.html"/>
+        <log type="testdox-text" target="test/tmp/testdox.txt"/>
+    </logging>
+</phpunit>

@@ -1,0 +1,8 @@
+
+<?= $this->form()->openTag($this->loginForm); ?>
+	<h2 class="text-center">Acesso</h2>
+	<?= $this->formInput($this->loginForm->get('username')); ?>
+	<?= $this->formInput($this->loginForm->get('password')); ?>
+	<div class="checkbox"></div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+<?= $this->form()->closeTag(); ?>

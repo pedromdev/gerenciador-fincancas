@@ -1,0 +1,16 @@
+ApplicationTest\Form\InputFilter\Login
+ [x] Validacao filtro para caso de sucesso
+ [x] Para campos vazios
+ [x] Para o campo usuario com caracteres nao aceitos
+ [x] Campos validados e filtrados
+ [x] Se classe existe
+ [x] Se esta no service locator
+
+ApplicationTest\Form\Login
+ [x] Input filter em uso para o formulario de login
+ [x] Se classe existe
+ [x] Se esta no service locator
+
+ApplicationTest\Controller\IndexController
+ [x] Pagina inicial
+

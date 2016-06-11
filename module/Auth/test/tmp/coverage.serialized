@@ -1,0 +1,717 @@
+<?php
+$coverage = new PHP_CodeCoverage;
+$coverage->setData(array (
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\Bootstrap.php' => 
+  array (
+    20 => 
+    array (
+    ),
+    21 => 
+    array (
+    ),
+    23 => 
+    array (
+    ),
+    24 => 
+    array (
+    ),
+    25 => 
+    array (
+    ),
+    26 => 
+    array (
+    ),
+    27 => 
+    array (
+    ),
+    28 => 
+    array (
+    ),
+    31 => 
+    array (
+    ),
+    32 => 
+    array (
+    ),
+    33 => 
+    array (
+    ),
+    40 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeRetornaUmaInstanciaNoServiceManager',
+      1 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocator',
+      4 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocatorAware',
+      5 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0',
+      6 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #1',
+      7 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0',
+      8 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1',
+      9 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2',
+      10 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #3',
+      11 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #4',
+      12 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      13 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      14 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      15 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    41 => NULL,
+    44 => 
+    array (
+    ),
+    46 => 
+    array (
+    ),
+    47 => 
+    array (
+    ),
+    48 => 
+    array (
+    ),
+    49 => 
+    array (
+    ),
+    50 => 
+    array (
+    ),
+    51 => NULL,
+    52 => 
+    array (
+    ),
+    54 => 
+    array (
+    ),
+    56 => 
+    array (
+    ),
+    57 => 
+    array (
+    ),
+    58 => 
+    array (
+    ),
+    59 => 
+    array (
+    ),
+    60 => 
+    array (
+    ),
+    63 => 
+    array (
+    ),
+    64 => 
+    array (
+    ),
+    65 => 
+    array (
+    ),
+    66 => 
+    array (
+    ),
+    67 => 
+    array (
+    ),
+    68 => 
+    array (
+    ),
+    69 => NULL,
+    70 => 
+    array (
+    ),
+    71 => 
+    array (
+    ),
+    72 => 
+    array (
+    ),
+    73 => NULL,
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Manager\\AuthManagerTest.php' => 
+  array (
+    15 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeClasseExiste',
+    ),
+    16 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeClasseExiste',
+    ),
+    18 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeClasseExiste',
+    ),
+    19 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeClasseExiste',
+    ),
+    22 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    23 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    24 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    25 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    26 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    29 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocator',
+    ),
+    30 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocator',
+    ),
+    31 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocator',
+    ),
+    34 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocatorAware',
+    ),
+    35 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocatorAware',
+    ),
+    36 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocatorAware',
+    ),
+    45 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #1',
+    ),
+    46 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #1',
+    ),
+    47 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #1',
+    ),
+    48 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #1',
+    ),
+    49 => 
+    array (
+    ),
+    58 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #3',
+      4 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #4',
+    ),
+    59 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #3',
+      4 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #4',
+    ),
+    60 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #3',
+      4 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #4',
+    ),
+    61 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #3',
+      4 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #4',
+    ),
+    62 => 
+    array (
+    ),
+    70 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    71 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    72 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    73 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    74 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    75 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    76 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    77 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+      1 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+      2 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2',
+      3 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3',
+    ),
+    86 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0',
+    ),
+    87 => 
+    array (
+    ),
+    88 => 
+    array (
+    ),
+    89 => 
+    array (
+    ),
+    90 => 
+    array (
+    ),
+    91 => 
+    array (
+    ),
+    97 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1',
+    ),
+    98 => 
+    array (
+    ),
+    99 => 
+    array (
+    ),
+    100 => 
+    array (
+    ),
+    101 => 
+    array (
+    ),
+    102 => 
+    array (
+    ),
+    107 => 
+    array (
+    ),
+    108 => 
+    array (
+    ),
+    109 => 
+    array (
+    ),
+    110 => 
+    array (
+    ),
+    111 => 
+    array (
+    ),
+    116 => 
+    array (
+    ),
+    117 => 
+    array (
+    ),
+    118 => 
+    array (
+    ),
+    119 => 
+    array (
+    ),
+    120 => 
+    array (
+    ),
+    125 => 
+    array (
+    ),
+    126 => 
+    array (
+    ),
+    128 => 
+    array (
+    ),
+    129 => 
+    array (
+    ),
+    130 => 
+    array (
+    ),
+    131 => 
+    array (
+    ),
+    132 => 
+    array (
+    ),
+    133 => 
+    array (
+    ),
+    134 => NULL,
+    140 => 
+    array (
+    ),
+    141 => 
+    array (
+    ),
+    142 => 
+    array (
+    ),
+    147 => 
+    array (
+    ),
+    148 => 
+    array (
+    ),
+    149 => 
+    array (
+    ),
+    150 => 
+    array (
+    ),
+    151 => 
+    array (
+    ),
+    152 => 
+    array (
+    ),
+    153 => NULL,
+    162 => 
+    array (
+    ),
+    163 => 
+    array (
+    ),
+    165 => 
+    array (
+    ),
+    171 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1',
+    ),
+    172 => 
+    array (
+    ),
+    173 => 
+    array (
+    ),
+    174 => 
+    array (
+    ),
+    176 => 
+    array (
+    ),
+    182 => 
+    array (
+    ),
+    183 => 
+    array (
+    ),
+    185 => 
+    array (
+    ),
+    190 => 
+    array (
+    ),
+    191 => 
+    array (
+    ),
+    194 => 
+    array (
+    ),
+    195 => 
+    array (
+    ),
+    197 => 
+    array (
+    ),
+    198 => 
+    array (
+    ),
+    199 => NULL,
+    80 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0',
+    ),
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Manager\\AuthManagerConfigTest.php' => 
+  array (
+    14 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeClasseExiste',
+    ),
+    15 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeClasseExiste',
+    ),
+    17 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeClasseExiste',
+    ),
+    18 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeClasseExiste',
+    ),
+    21 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    22 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    23 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeRetornaUmaInstanciaNoServiceManager',
+    ),
+    30 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeLancaExcecaoQuandoNaoHaConfiguracoesDoAuthManager with data set #0',
+    ),
+    31 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeLancaExcecaoQuandoNaoHaConfiguracoesDoAuthManager with data set #0',
+    ),
+    34 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas',
+    ),
+    35 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas',
+    ),
+    36 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas',
+    ),
+    37 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas',
+    ),
+    38 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas',
+    ),
+    45 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerConfigTest::testSeLancaExcecaoQuandoPassaUmaConfiguracaoInexistente with data set #0',
+    ),
+    46 => 
+    array (
+    ),
+    51 => 
+    array (
+    ),
+    52 => 
+    array (
+    ),
+    53 => 
+    array (
+    ),
+    54 => NULL,
+    61 => 
+    array (
+    ),
+    62 => 
+    array (
+    ),
+    63 => 
+    array (
+    ),
+    64 => 
+    array (
+    ),
+    65 => 
+    array (
+    ),
+    66 => NULL,
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\FakeAdapterMock.php' => 
+  array (
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\FakeApaterWithLoginMethodMock.php' => 
+  array (
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\FakeAdapterFactoryMock.php' => 
+  array (
+    12 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2',
+    ),
+    13 => NULL,
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\AuthAdapterFactoryMock.php' => 
+  array (
+    12 => 
+    array (
+      0 => 'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0',
+    ),
+    13 => NULL,
+  ),
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\AuthAdapterMock.php' => 
+  array (
+  ),
+));
+$coverage->setTests(array (
+  'AuthTest\\Manager\\AuthManagerConfigTest::testSeClasseExiste' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerConfigTest::testSeRetornaUmaInstanciaNoServiceManager' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerConfigTest::testSeLancaExcecaoQuandoNaoHaConfiguracoesDoAuthManager with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerConfigTest::testSeAsConfiguracoesForamInicializadas' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerConfigTest::testSeLancaExcecaoQuandoPassaUmaConfiguracaoInexistente with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeClasseExiste' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstanciaNoServiceManager' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocator' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeEhUmServiceLocatorAware' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeLancaExcecaoDeServicoNaoEncontrado with data set #1' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #1' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #2' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #3' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testLancaExcecaoQuandoNaoEUmaInstanciaAuthAdapterInterface with data set #4' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #1' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #2' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'AuthTest\\Manager\\AuthManagerTest::testSeRetornaUmaInstancia with data set #3' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Manager\\AuthManagerConfigTest.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Manager\\AuthManagerTest.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\AuthAdapterFactoryMock.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\AuthAdapterMock.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\FakeAdapterFactoryMock.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\FakeAdapterMock.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\AuthTest\\Mock\\FakeApaterWithLoginMethodMock.php' => true,
+  'U:\\projects\\php\\psadmin\\module\\Auth\\test\\Bootstrap.php' => true,
+));
+
+return $coverage;
