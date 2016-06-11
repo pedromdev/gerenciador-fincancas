@@ -150,4 +150,16 @@ abstract class AbstractHttpControllerTestCase extends \Zend\Test\PHPUnit\Control
         $this->serviceLocator = $serviceManager;
         return $this;
     }
+    
+    /**
+     * Retorna o resultado da ação executada
+     * 
+     * @return mixed
+     */
+    public function getActionResult()
+    {
+        /* @var $mvcEvent \Zend\Mvc\MvcEvent */
+        $mvcEvent = $this->getApplication()->getMvcEvent();
+        return $mvcEvent->getResult();
+    }
 }
