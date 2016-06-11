@@ -1,6 +1,6 @@
 <?php
 
-namespace ThemeBuilderModule;
+namespace Theme;
 
 use \Zend\ModuleManager\Feature\ConfigProviderInterface;
 use \Zend\ModuleManager\Feature\AutoloaderProviderInterface;

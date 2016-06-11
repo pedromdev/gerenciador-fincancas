@@ -1,6 +1,6 @@
 <?php
 
-namespace ThemeBuilderModuleTest;
+namespace ThemeTest;
 
 use \Zend\Loader\AutoloaderFactory;
 use \Zend\Mvc\Service\ServiceManagerConfig;
