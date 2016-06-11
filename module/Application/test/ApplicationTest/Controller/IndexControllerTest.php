@@ -18,8 +18,10 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     public function testPaginaInicial()
     {
         $this->dispatch('/', 'GET');
+        $actionResult = $this->getActionResult();
         $this->assertActionName('index');
         $this->assertMatchedRouteName('home');
-        var_dump($this->getResult());
+        $this->assertInstanceOf(\Zend\View\Model\ViewModel::class, $actionResult);
+        $this->assertInstanceOf(\Application\Form\Login::class, $actionResult->getVariable('loginForm'));
     }
 }
