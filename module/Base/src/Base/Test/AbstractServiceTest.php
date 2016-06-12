@@ -47,7 +47,10 @@ abstract class AbstractServiceTest extends \PHPUnit_Framework_TestCase implement
         $this->assertInstanceOf($this->getClassName(), $instance);
     }
     
-    abstract public function getService();
+    public function getService()
+    {
+        return $this->getServiceLocator()->get($this->getServiceName());
+    }
     
     abstract protected function initBeforeSetUp();
     
