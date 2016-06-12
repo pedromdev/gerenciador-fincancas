@@ -7,4 +7,5 @@ return array(
     'DoctrineORMModule',
     'Base',
     'Application',
+    'Theme',
 );
