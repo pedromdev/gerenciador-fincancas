@@ -22,8 +22,14 @@ abstract class ViewHelperTest extends AbstractServiceTest
      * @param \Zend\ServiceManager\ServiceManagerAwareInterface $serviceLocator
      * @return ViewHelperTest
      */
-    public function setServiceLocator(\Zend\ServiceManager\ServiceManagerAwareInterface $serviceLocator)
+    public function setServiceLocator(\Zend\ServiceManager\ServiceLocatorInterface $serviceLocator)
     {
+        print get_class($serviceLocator);
+        if (!$serviceLocator instanceof \Zend\ServiceManager\ServiceLocatorAwareInterface) {
+            throw new \InvalidArgumentException(
+                "O argumento passado deve ser uma instância de \Zend\ServiceManager\ServiceManagerAwareInterface"
+            );
+        }
         return parent::setServiceLocator($serviceLocator);
     }
 
