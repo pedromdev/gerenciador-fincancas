@@ -5,6 +5,9 @@
     colors="true"
     stopOnFailure="false">
     <testsuites>
+        <testsuite name="view-helpers">
+            <directory>./test/ThemeTest/View/</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist>
