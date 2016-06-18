@@ -31,6 +31,25 @@ return array(
                     ),
                 ),
             ),
+            'signup' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route' => '/signup',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'signup',
+                    ),
+                    'http' => array(
+                        'only_xml_http_request' => false,
+                        'accepted_methods' => array(
+                            'GET' => true,
+                            'POST' => false,
+                            'PUT' => false,
+                            'DELETE' => false,
+                        ),
+                    ),
+                ),
+            ),
         ),
     ),
     
@@ -42,6 +61,8 @@ return array(
         'factories' => array(
             'translator' => 'Zend\Mvc\Service\TranslatorServiceFactory',
             __NAMESPACE__ . '\Form\Login' => Form\LoginFactory::class,
+            __NAMESPACE__ . '\Form\Signup' => Form\SignupFactory::class,
+            __NAMESPACE__ . '\Form\InputFilter\Signup' => Form\InputFilter\SignupFactory::class,
         ),
         'invokables' => array(
             __NAMESPACE__ . '\Form\InputFilter\Login' => Form\InputFilter\Login::class,

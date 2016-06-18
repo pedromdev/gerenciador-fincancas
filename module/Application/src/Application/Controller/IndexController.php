@@ -13,4 +13,11 @@ class IndexController extends AbstractActionController
             'loginForm' => $this->getServiceLocator()->get('Application\Form\Login'),
         ]);
     }
+    
+    public function signupAction()
+    {
+        return new ViewModel([
+            'signupForm' => $this->getServiceLocator()->get('Application\Form\Signup'),
+        ]);
+    }
 }

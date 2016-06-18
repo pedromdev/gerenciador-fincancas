@@ -20,6 +20,12 @@ ApplicationTest\Form\Login
  [x] Se classe existe
  [x] Se esta no service locator
 
+ApplicationTest\Form\Signup
+ [x] Input filter em uso para o formulario de cadastro
+ [x] Se classe existe
+ [x] Se esta no service locator
+
 ApplicationTest\Controller\IndexController
  [x] Pagina inicial
+ [x] Pagina de cadastro de usuario
 
