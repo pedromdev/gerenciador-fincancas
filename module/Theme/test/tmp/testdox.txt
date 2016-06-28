@@ -1,6 +1,0 @@
-ThemeTest\View\Theme
- [x] Se possui um event manager
- [x] Se possui um helper plugin manager
- [x] Se classe existe
- [x] Se esta no service locator
-

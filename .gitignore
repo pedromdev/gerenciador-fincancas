@@ -3,3 +3,4 @@
 /nbproject/
 *local.php
 composer.lock 
+/module/*/test/tmp/*
