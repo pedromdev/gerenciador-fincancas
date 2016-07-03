@@ -1,6 +1,6 @@
 /data/
-/vendor/
+*/vendor/
 /nbproject/
 *local.php
-composer.lock 
+*composer.lock 
 /module/*/test/tmp/*
