@@ -12,30 +12,36 @@ use \ThemeTest\AssetManager\Mock\InvalidDependencyMock;
  */
 class JavascriptTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     *
+     * @var Javascript
+     */
+    private $javascript;
+    
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->javascript = new Javascript('unit-test');
+    }
+    
     public function testVerificarTipoDoAsset()
     {
-        $javacript = new Javascript('unit-test');
-        
-        $this->assertEquals('text/javascript', $javacript->getType());
+        $this->assertEquals('text/javascript', $this->javascript->getType());
     }
     
     public function testSeExisteOAtributoId()
     {
-        $javacript = new Javascript('unit-test');
+        $this->assertTrue($this->javascript->hasAttribute('id'), 'Um identificador não foi adicionado');
         
-        $this->assertTrue($javacript->hasAttribute('id'), 'Um identificador não foi adicionado');
-        
-        $this->assertEquals('unit-test', $javacript->getIdentifier());
-        $this->assertEquals('unit-test', $javacript->getAttribute('id'));
+        $this->assertEquals('unit-test', $this->javascript->getIdentifier());
+        $this->assertEquals('unit-test', $this->javascript->getAttribute('id'));
     }
     
     public function testAdicionarAtributoComTipoDeValorNaoAceito()
     {
-        $javacript = new Javascript('unit-test');
+        $this->javascript->addAttribute('attr', true);
         
-        $javacript->addAttribute('attr', true);
-        
-        $this->assertEquals('', $javacript->getAttribute('attr'));
+        $this->assertEquals('', $this->javascript->getAttribute('attr'));
     }
     
     /**
@@ -45,83 +51,69 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testAdicionarAtributoComNomeNaoAceito()
     {
-        $javacript = new Javascript('unit-test');
-        
-        $javacript->addAttribute('at/tr', 'hello-world');
+        $this->javascript->addAttribute('at/tr', 'hello-world');
     }
     
     public function testAdicionarESobrescreverAtributos()
     {
-        $javacript = new Javascript('unit-test');
-        
-        $javacript->setAttributes([
+        $this->javascript->setAttributes([
             'id' => 'other-unit-test',
             'class' => 'javascript',
         ]);
         
-        $this->assertTrue($javacript->hasAttribute('class'), 'O atributo class não foi adicionado');
-        $this->assertEquals('other-unit-test', $javacript->getAttribute('id'));
-        $this->assertEquals('javascript', $javacript->getAttribute('class'));
+        $this->assertTrue($this->javascript->hasAttribute('class'), 'O atributo class não foi adicionado');
+        $this->assertEquals('other-unit-test', $this->javascript->getAttribute('id'));
+        $this->assertEquals('javascript', $this->javascript->getAttribute('class'));
     }
     
     public function testRemoverAtributos()
     {
-        $javacript = new Javascript('unit-test');
+        $this->javascript->removeAttributes(['type']);
         
-        $javacript->removeAttributes(['type']);
-        
-        $this->assertFalse(in_array('type', $javacript->getAttributes()), 'Alguns dos atributos não foram removidos');
+        $this->assertFalse(in_array('type', $this->javascript->getAttributes()), 'Alguns dos atributos não foram removidos');
     }
     
     public function testRemoverAtributosQueNaoExistem()
     {
-        $javacript = new Javascript('unit-test');
+        $countAttributes = count($this->javascript->getAttributes());
+        $this->javascript->removeAttributes(['class']);
         
-        $countAttributes = count($javacript->getAttributes());
-        $javacript->removeAttributes(['class']);
-        
-        $this->assertEquals($countAttributes, count($javacript->getAttributes()));
+        $this->assertEquals($countAttributes, count($this->javascript->getAttributes()));
     }
     
     public function testInserirCaminhoDoArquivo()
     {
-        $javacript = new Javascript('unit-test');
+        $this->javascript->setPath('/path/to/javascript.js');
         
-        $javacript->setPath('/path/to/javascript.js');
-        
-        $this->assertEquals('/path/to/javascript.js', $javacript->getPath());
-        $this->assertEquals('<script type="text/javascript" id="unit-test" src="/path/to/javascript.js"></script>', "$javacript");
+        $this->assertEquals('/path/to/javascript.js', $this->javascript->getPath());
+        $this->assertEquals('<script type="text/javascript" id="unit-test" src="/path/to/javascript.js"></script>', "$this->javascript");
     }
     
     public function testEnfileirarJavascript()
     {
-        $javacript = new Javascript('unit-test');
+        $this->javascript->enqueue();
         
-        $javacript->enqueue();
-        
-        $this->assertEquals(QueueStatus::ENQUEUED, $javacript->getStatus());
+        $this->assertEquals(QueueStatus::ENQUEUED, $this->javascript->getStatus());
     }
     
     public function testAdicionarDependencia()
     {
-        $javacript = new Javascript('unit-test');
         $javacript2 = new Javascript('unit-test2');
         
-        $javacript->add($javacript2);
+        $this->javascript->add($javacript2);
         
-        $this->assertEquals($javacript2, $javacript->get('unit-test2'));
+        $this->assertEquals($javacript2, $this->javascript->get('unit-test2'));
     }
     
     public function testEnfileirarJavascriptComDependencias()
     {
-        $javacript = new Javascript('unit-test');
         $javacript2 = new Javascript('unit-test2');
         
-        $javacript->add($javacript2);
-        $javacript->enqueue();
+        $this->javascript->add($javacript2);
+        $this->javascript->enqueue();
         
-        $this->assertTrue($javacript->hasDependencies(), 'Não foi possível detectar as dependências adicionadas');
-        $this->assertEquals(QueueStatus::ENQUEUED, $javacript->getStatus());
+        $this->assertTrue($this->javascript->hasDependencies(), 'Não foi possível detectar as dependências adicionadas');
+        $this->assertEquals(QueueStatus::ENQUEUED, $this->javascript->getStatus());
         $this->assertEquals(QueueStatus::ENQUEUED, $javacript2->getStatus());
     }
     
@@ -133,11 +125,10 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testAdicionarDependenciaJaInserida()
     {
-        $javacript = new Javascript('unit-test');
         $javacript2 = new Javascript('unit-test2');
         
-        $javacript->add($javacript2);
-        $javacript->add($javacript2);
+        $this->javascript->add($javacript2);
+        $this->javascript->add($javacript2);
     }
     
     /**
@@ -148,11 +139,10 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testCausarEfeitoDeDependenciaCircular()
     {
-        $javacript = new Javascript('unit-test');
         $javacript2 = new Javascript('unit-test2');
         
-        $javacript->add($javacript2);
-        $javacript2->add($javacript);
+        $this->javascript->add($javacript2);
+        $javacript2->add($this->javascript);
     }
     
     /**
@@ -163,13 +153,12 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testCausarEfeitoDeDependenciaCircularEmSubdependencias()
     {
-        $javacript = new Javascript('unit-test');
         $javacript2 = new Javascript('unit-test2');
         $javacript3 = new Javascript('unit-test3');
         
-        $javacript->add($javacript3);
+        $this->javascript->add($javacript3);
         $javacript3->add($javacript2);
-        $javacript2->add($javacript);
+        $javacript2->add($this->javascript);
     }
     
     /**
@@ -180,9 +169,7 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testCausarEfeitoDeDependenciaInexistente()
     {
-        $javacript = new Javascript('unit-test');
-        
-        $javacript->get('not-found');
+        $this->javascript->get('not-found');
     }
     
     /**
@@ -193,12 +180,11 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testCausarEfeitoDeDependenciaNaoEncontradaNasDependencias()
     {
-        $javacript = new Javascript('unit-test');
         $javacript2 = new Javascript('unit-test2');
         
-        $javacript->add($javacript2);
+        $this->javascript->add($javacript2);
         
-        $javacript->get('not-found');
+        $this->javascript->get('not-found');
     }
     
     /**
@@ -209,10 +195,9 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testCausarEfeitoDeDependenciaInvalida()
     {
-        $javascript = new Javascript('unit-test');
         $mock = new InvalidDependencyMock();
         
-        $javascript->add($mock);
+        $this->javascript->add($mock);
     }
     
     /**
@@ -223,49 +208,43 @@ class JavascriptTest extends \PHPUnit_Framework_TestCase
      */
     public function testCausarEfeitoDeAutoDependencia()
     {
-        $javascript = new Javascript('unit-test');
         $javascript2 = new Javascript('unit-test');
         
-        $javascript->add($javascript2);
+        $this->javascript->add($javascript2);
     }
     
     public function testRemoverUmaDependencia()
     {
-        $javascript = new Javascript('unit-test');
         $javascript2 = new Javascript('unit-test2');
         
-        $javascript->add($javascript2);
+        $this->javascript->add($javascript2);
         
-        $this->assertTrue($javascript->remove('unit-test2'), 'Não removeu uma dependência existente');
+        $this->assertTrue($this->javascript->remove('unit-test2'), 'Não removeu uma dependência existente');
     }
     
     public function testRemoverDependenciaInexistente()
     {
-        $javascript = new Javascript('unit-test');
-        
-        $this->assertFalse($javascript->remove('not-found'), 'Foi removida uma dependência inexistente');
+        $this->assertFalse($this->javascript->remove('not-found'), 'Foi removida uma dependência inexistente');
     }
     
     public function testRemoverTodasAsDependencias()
     {
-        $javascript = new Javascript('unit-test');
         $javascript2 = new Javascript('unit-test2');
         
-        $javascript->add($javascript2);
-        $countDependencies = count($javascript->getAll());
+        $this->javascript->add($javascript2);
+        $countDependencies = count($this->javascript->getAll());
         
-        $this->assertTrue($javascript->removeAll(), 'Não removeu uma dependência existente');
-        $this->assertNotEquals($countDependencies, count($javascript->getAll()));
+        $this->assertTrue($this->javascript->removeAll(), 'Não removeu uma dependência existente');
+        $this->assertNotEquals($countDependencies, count($this->javascript->getAll()));
     }
     
     public function testSeNomeDaDependenciaEhOIdentificador()
     {
-        $javascript = new Javascript('unit-test');
         $javascript2 = new Javascript('unit-test2');
         
-        $javascript->setName('other-unit-test');
+        $this->javascript->setName('other-unit-test');
         
-        $this->assertEquals('other-unit-test', $javascript->getName());
+        $this->assertEquals('other-unit-test', $this->javascript->getName());
         $this->assertEquals('unit-test2', $javascript2->getName());
     }
 }
